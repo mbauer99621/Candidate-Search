@@ -1,4 +1,55 @@
-# React + TypeScript + Vite
+# Candidate Search Application
+
+## Description
+The Candidate Search Application is a React-based web application that allows users to browse potential candidates from GitHub, accept or reject them, and save accepted candidates for future reference.
+
+## Features
+- Fetches candidate data from GitHub API.
+- Displays candidate details including avatar, name, location, email, company, bio, and github url.
+- Allows users to accept or reject candidates.
+- Displays a list of saved candidates.
+- Allows the user to reject a candidate off of the saved list.
+
+## Technologies Used
+- React.js
+- TypeScript
+- LocalStorage API
+- GitHub API
+
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/mbauer99621/candidate-search.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd candidate-search
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+
+## Usage
+1. Navigate to the `Candidate Search` page.
+2. Browse through candidates fetched from GitHub.
+3. Click the accept button to save a candidate.
+4. Click the reject button to move to the next candidate.
+5. View saved candidates under the `Potential Candidates` section.
+6. Click the reject button in the saved candidates table to remove them.
+
+## License
+This project is licensed under the MIT License.
+
+## Author
+- **Your Name** - [GitHub Profile](https://github.com/your-username)
+
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
