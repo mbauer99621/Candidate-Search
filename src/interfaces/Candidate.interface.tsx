@@ -7,11 +7,12 @@ export interface CandidateInterface {
     email: string;
     company: string;
     bio: string;
+    html_url: string;
     reject: string; //image
     onClick: () => void;
   }
   
-  const MyComponent: React.FC<CandidateInterface> = ({ image, name, location, email, company, bio, reject, onClick }) => {
+  const MyComponent: React.FC<CandidateInterface> = ({ image, name, location, email, company, html_url, bio, reject, onClick }) => {
     return (
         <div onClick={onClick}>
             <img src={image} alt={name} />
@@ -20,6 +21,7 @@ export interface CandidateInterface {
             <p>Location: {location}</p>
             <p>Email: {email}</p>
             <p>Company: {company}</p>
+            <p>Github: {html_url}</p>
             <img src={reject} alt="Reject" />
         </div>
     );

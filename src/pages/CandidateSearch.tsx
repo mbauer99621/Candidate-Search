@@ -30,6 +30,8 @@ const CandidateSearch = () => {
 
   const candidate = candidates[currentIndex];
 
+  console.log(candidate);
+
   //Accepted Candidated
   const handleAccept = () => {
     console.log(`Accepted: ${candidate.name}`);
@@ -53,11 +55,12 @@ const CandidateSearch = () => {
       <h1>Candidate Search</h1>
       <div className="candidate-card">
         <img src={candidate.avatar_url} alt={candidate.name} className="candidate-image" />
-        <h2>{candidate.name || "No Name Provided"}</h2>
+        <h2>{candidate.login || "No Name Provided"}</h2>
         <p><strong>Location:</strong> {candidate.location || "Not available"}</p>
         <p><strong>Email:</strong> {candidate.email || "Not available"}</p>
         <p><strong>Company:</strong> {candidate.company || "Not available"}</p>
         <p><strong>Bio:</strong> {candidate.bio || "Not available"}</p>
+        <p><strong>Github:</strong> {candidate.html_url || "Not available"}</p>
       </div>
 
       {/* Buttons outside the candidate card */}

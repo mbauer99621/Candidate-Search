@@ -10,6 +10,13 @@ const SavedCandidates = () => {
     setSavedCandidates(savedCandidatesData);
   }, []);
 
+
+  const handleReject = (id: number) => {
+    const updatedCandidates = savedCandidates.filter(candidate => candidate.id !== id);
+    setSavedCandidates(updatedCandidates);
+    localStorage.setItem('savedCandidates', JSON.stringify(updatedCandidates));
+  };
+
   return (
     <div className="saved-candidates-container">
       <h1>Potential Candidates</h1>
@@ -27,6 +34,8 @@ const SavedCandidates = () => {
               <th>Email</th>
               <th>Company</th>
               <th>Bio</th>
+              <th>Github</th>
+              <th>Reject Candidate</th>
             </tr>
           </thead>
           <tbody>
@@ -41,6 +50,12 @@ const SavedCandidates = () => {
                 <td>{candidate.email || "Not available"}</td>
                 <td>{candidate.company || "Not available"}</td>
                 <td>{candidate.bio || "Not available"}</td>
+                <td>{candidate.html_url || "Not available"}</td>
+                <td>
+                  <button onClick={() => handleReject(candidate.id)} className="reject-button">
+                    <img src="./src/assets/subtraction.png" alt="Reject" />
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
